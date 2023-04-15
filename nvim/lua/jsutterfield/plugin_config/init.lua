@@ -1,0 +1,7 @@
+require ("jsutterfield.plugin_config.cmp")
+require ("jsutterfield.plugin_config.easy-motion")
+require ("jsutterfield.plugin_config.lsp")
+require ("jsutterfield.plugin_config.nvim-tree")
+require ("jsutterfield.plugin_config.telescope")
+require ("jsutterfield.plugin_config.treesitter")
+require ("jsutterfield.plugin_config.gitsigns")

@@ -1,6 +1,13 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - clean: ['~']
+
+- shell:
+  - [sh pre-install.sh, Running pre installation script]
 
 - link:
     ~/.zshrc: zshrc
-
-
+    ~/.config/nvim: nvim
