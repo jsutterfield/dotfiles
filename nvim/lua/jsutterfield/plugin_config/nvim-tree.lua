@@ -7,7 +7,6 @@ vim.opt.termguicolors = true
 
 local status_ok, nvim_tree = pcall(require, "nvim-tree")
 if not status_ok then
-    print("nvim-tree couldn't be loaded")
     return
 end
 
@@ -78,7 +77,7 @@ local config = {
   },
   update_focused_file = {
     enable = true,
-  }
+  },
 }
 
 vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<cr>" ,{silent = true, noremap = true})
