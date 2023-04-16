@@ -2,6 +2,10 @@
     link:
       create: true
       relink: true
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
 
 - clean: ['~']
 
@@ -10,8 +14,8 @@
 
 - shell:
   # - [sh pre-install.sh, Running pre installation script]
-  - [sh ./install_scripts/install_zsh.sh, 'installing zsh']
-  - [sh ./install_scripts/make_zsh_default.sh, 'setting zsh as default shell']
+  - [./install_scripts/install_zsh.sh, 'installing zsh']
+  - [./install_scripts/make_zsh_default.sh, 'setting zsh as default shell']
 
 - link:
     ~/.zshrc: zshrc
