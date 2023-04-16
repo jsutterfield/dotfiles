@@ -1,14 +1,23 @@
 #!/bin/bash
 
-# Check if Homebrew is installed
-if [ ! -f "`which brew`" ]; then
-  echo 'Installing homebrew'
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+install_or_update_homebrew() {
+  # Check if Homebrew is installed
+  if [ ! -f "`which brew`" ]; then
+    echo 'Installing homebrew'
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  else
+    echo 'Updating homebrew'
+    brew update
+  fi
+  brew tap homebrew/bundle  # Install Homebrew Bundle
+}
+
+# Check if the operating system is macOS
+if [ "$(uname)" = "Darwin" ]; then
+  install_or_update_homebrew
 else
-  echo 'Updating homebrew'
-  brew update
+  echo "Not running on MacOS, so skipping commands to update homebrew"
 fi
-brew tap homebrew/bundle  # Install Homebrew Bundle
 
 # Check if oh-my-zsh is installed
 OMZDIR="$HOME/.oh-my-zsh"
@@ -16,12 +25,11 @@ if [ ! -d "$OMZDIR" ]; then
   echo 'Installing oh-my-zsh'
   /bin/sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
-  echo 'Updating oh-my-zsh'
-  upgrade_oh_my_zsh
+  echo 'oh-my-zsh already exists'
 fi
 
 # Change default shell
-if [! $0 = "-zsh"]; then
+if [ ! $0 = "-zsh" ]; then
   echo 'Changing default shell to zsh'
   chsh -s /bin/zsh
 else

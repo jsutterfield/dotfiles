@@ -5,8 +5,12 @@
 
 - clean: ['~']
 
+- create:
+  - ~/bin
+
 - shell:
-  - [sh pre-install.sh, Running pre installation script]
+  # - [sh pre-install.sh, Running pre installation script]
+  - [sh ./install_scripts/make_zsh_default.sh, 'installing zsh as default shell']
 
 - link:
     ~/.zshrc: zshrc
