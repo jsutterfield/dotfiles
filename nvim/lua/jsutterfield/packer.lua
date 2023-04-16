@@ -71,10 +71,7 @@ return require('packer').startup(function(use)
   use 'williamboman/mason-lspconfig.nvim'
 
   -- auto paranthesis closing
-  use {
-	"windwp/nvim-autopairs",
-	config = function() require("nvim-autopairs").setup {} end
-  }
+  use 'windwp/nvim-autopairs'
 
   -- File explorer
   use 'nvim-tree/nvim-tree.lua'
@@ -105,10 +102,7 @@ return require('packer').startup(function(use)
   -- git integration
   use 'lewis6991/gitsigns.nvim'
 
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-}
+  -- comment out code
+  use 'numToStr/Comment.nvim'
+
 end)

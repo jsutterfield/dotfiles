@@ -97,10 +97,6 @@ end
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
   clangd = {},
-  -- gopls = {},
-  pyright = {},
-  -- rust_analyzer = {},
-  -- tsserver = {},
 
   lua_ls = {
 	Lua = {
@@ -122,9 +118,15 @@ local servers = {
   },
 }
 
+local status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
+if not status_ok then
+    print("could not load cmp_nvim_lsp")
+    return
+end
+
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
+capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 -- Setup mason so it can manage external tooling
 require('mason').setup()

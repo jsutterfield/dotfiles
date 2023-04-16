@@ -5,6 +5,12 @@ vim.g.nvim_tree_highlight_opened_files = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
+local status_ok, nvim_tree = pcall(require, "nvim-tree")
+if not status_ok then
+    print("nvim-tree couldn't be loaded")
+    return
+end
+
 local lib = require("nvim-tree.lib")
 local view = require("nvim-tree.view")
 
@@ -55,28 +61,28 @@ end
 
 local config = {
   view = {
-	mappings = {
-	  custom_only = false,
-	  list = {
-		{ key = "l", action = "edit", action_cb = edit_or_open },
-		{ key = "L", action = "vsplit_preview", action_cb = vsplit_preview },
-		{ key = "h", action = "close_node" },
-		{ key = "H", action = "collapse_all", action_cb = collapse_all }
-	  }
-	},
+    mappings = {
+      custom_only = false,
+      list = {
+        { key = "l", action = "edit", action_cb = edit_or_open },
+        { key = "L", action = "vsplit_preview", action_cb = vsplit_preview },
+        { key = "h", action = "close_node" },
+        { key = "H", action = "collapse_all", action_cb = collapse_all }
+      }
+    },
   },
   actions = {
-	open_file = {
-	  quit_on_open = false
-	}
+    open_file = {
+      quit_on_open = false
+    }
   },
   update_focused_file = {
-	enable = true,
+    enable = true,
   }
 }
 
 vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<cr>" ,{silent = true, noremap = true})
-require('nvim-tree').setup(config)
+nvim_tree.setup(config)
 
 
 -- autoclose if nvim-tree is the last buffer
@@ -87,7 +93,7 @@ vim.api.nvim_create_autocmd({"QuitPre"}, {
 -- -- vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeFocus<cr>" ,{silent = true, noremap = true})
 -- require('nvim-tree').setup({
 --   update_focused_file = {
--- 	enable = true,
+--  enable = true,
 --   }
 -- })
 --
