@@ -2,7 +2,7 @@
 
 set -euxo pipefail
 
-$INSTALL_PATH="${HOME}/.zsh/pure"
+INSTALL_PATH="${HOME}/.zsh/pure"
 
 if [ -d "${INSTALL_PATH}" ]; then
     echo "pure already installed"
