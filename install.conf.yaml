@@ -21,11 +21,11 @@
     ~/.config/bat/config: bat_config
 
 - shell:
-  # - [./install_scripts/install_homebrew.sh, 'Installing homebrew']
+  - [./install_scripts/install_homebrew.sh, 'Installing homebrew']
   - [./install_scripts/install_zsh.sh, 'Installing zsh']
   - [./install_scripts/make_zsh_default.sh, 'Setting zsh as default shell']
   - [./install_scripts/install_pure_prompt.sh, 'Installing pure prompt']
   - [./install_scripts/install_custom_zsh_plugins.sh, 'Installing custom zsh plugins']
   - [./install_scripts/install_oh_my_zsh.sh, 'Installing oh-my-zsh']
   - [./install_scripts/install_neovim.sh, 'Installing neovim']
-  # - [./install_scripts/install_helper_programs.sh, 'Installing helper programs']
+  - 'echo "Make sure to install the following programs: fzf ripgrep fd broot tldr bat autojump"'
