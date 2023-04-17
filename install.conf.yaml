@@ -13,9 +13,10 @@
   - ~/bin
 
 - shell:
-  # - [sh pre-install.sh, Running pre installation script]
-  - [./install_scripts/install_zsh.sh, 'installing zsh']
-  - [./install_scripts/make_zsh_default.sh, 'setting zsh as default shell']
+  - [./install_scripts/install_homebrew.sh, 'installing homebrew']
+  - [./install_scripts/install_zsh.sh, 'Installing zsh']
+  - [./install_scripts/make_zsh_default.sh, 'Setting zsh as default shell']
+  - [./install_scripts/install_neovim.sh, 'Installing neovim']
 
 - link:
     ~/.zshrc: zshrc
