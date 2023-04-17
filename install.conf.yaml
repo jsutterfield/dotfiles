@@ -15,6 +15,10 @@
 
 - clean: ['~', '~/bin']
 
+- link:
+    ~/.zshrc: zshrc
+    ~/.config/nvim: nvim
+
 - shell:
   - [./install_scripts/install_homebrew.sh, 'Installing homebrew']
   - [./install_scripts/install_helper_programs.sh, 'Installing helper programs']
@@ -23,6 +27,3 @@
   - [./install_scripts/install_neovim.sh, 'Installing neovim']
   - [./install_scripts/install_oh_my_zsh.sh, 'Installing oh-my-zsh']
 
-- link:
-    ~/.zshrc: zshrc
-    ~/.config/nvim: nvim
