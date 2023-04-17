@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -euxo pipefail
-
 if [[ "$(uname)" == "Darwin" ]]; then
   if command -v brew >/dev/null 2>&1; then
     echo "Homebrew is already installed."

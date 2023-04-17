@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -euxo pipefail
-
 INSTALL_PATH="${HOME}/.oh-my-zsh/custom/plugins"
 
 mkdir -p "${INSTALL_PATH}"

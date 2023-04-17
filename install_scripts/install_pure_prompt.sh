@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -euxo pipefail
-
 INSTALL_PATH="${HOME}/.zsh/pure"
 
 if [ -d "${INSTALL_PATH}" ]; then

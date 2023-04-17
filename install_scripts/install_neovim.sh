@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -euxo pipefail
-
 NVIM_VERSION="v0.8.3"
 INSTALL_DIR="$HOME/bin"
 
