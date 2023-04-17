@@ -34,7 +34,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	dirhistory
 	copypath
 	colored-man-pages
 	zsh-syntax-highlighting
@@ -64,31 +63,12 @@ eval "$(jump shell)"
 
 eval "$(direnv hook zsh)"
 
-# JDK
-unset JAVA_HOME
-export JAVA8_HOME="$(/usr/libexec/java_home -v1.8)"
-export JAVA11_HOME="$(/usr/libexec/java_home -v11)"
-alias jdk_11='export JAVA_HOME="$JAVA11_HOME" && export PATH="$JAVA_HOME/bin:$PATH"'
-alias jdk_8='export JAVA_HOME="$JAVA8_HOME" && export PATH="$JAVA_HOME/bin:$PATH"'
-jdk_11 # Use jdk 11 as the default jdk
-
 unalias "..."
 export EDITOR="nvim"
 
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 bindkey \^U backward-kill-line
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-export PATH=$PATH:/usr/local/opt/postgresql@11/bin
-
-# Enable bazel tab completion
-if [ -d $(brew --prefix)/share/zsh/site-functions ]; then
-    fpath+="$(brew --prefix)/share/zsh/site-functions"
-fi
 
 # git aliases
 alias gb="git branch"
@@ -101,7 +81,7 @@ alias gl="git log"
 alias gam='git commit -am'
 alias gama='git add -A && git commit --amend'
 alias gclean='git branch -D $(git branch | grep "^[[:space:]]*arcpatch")'
-gcm="git checkout main && git pull -r origin main"
+alias gcm="git checkout main && git pull -r origin main"
 
 # arc aliases
 alias ad="arc diff"
@@ -138,16 +118,7 @@ export PATH=/usr/bin:"$PATH"
 # fzf settigs
 FZF_DEFAULT_COMMAND=fd
 
-# Great commands to have on your system
-# rg (ripgrep)
-# tldr
-# fzf
-# fd (improved find)
-
-# find all files containing the word "interface" and sort the results by modification time
-# rg -l interface | xargs ls -lt
-
-source $HOME/.config/broot/launcher/bash/br
-
 # connect to go devpod
 alias dev="ssh jsutterfield.devpod-nld"
+
+source $HOME/.config/broot/launcher/bash/br
