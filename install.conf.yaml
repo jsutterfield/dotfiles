@@ -6,11 +6,13 @@
       stdin: true
       stdout: true
       stderr: true
-
-- clean: ['~']
+    clean:
+      force: true
 
 - create:
   - ~/bin
+
+- clean: ['~', '~/bin']
 
 - shell:
   - [./install_scripts/install_homebrew.sh, 'installing homebrew']

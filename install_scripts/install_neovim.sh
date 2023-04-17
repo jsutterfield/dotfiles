@@ -1,23 +1,31 @@
 #!/bin/bash
 
-NVIM_VERSION="0.8.3"
-INSTALL_DIR="$HOME/bin/nvim"
+set -euxo pipefail
+
+NVIM_VERSION="v0.8.3"
+INSTALL_DIR="$HOME/bin"
 
 mkdir -p "${INSTALL_DIR}"
 
-if [ ! -d "${INSTALL_DIR}/bin/nvim" ]; then
-  if [[ "$(uname)" == "Darwin" ]]; then
-    # MacOS
-    curl -LO "https://github.com/neovim/neovim/releases/download/v${NVIM_VERSION}/nvim-macos.tar.gz"
-    tar -xzf nvim-macos.tar.gz
-    rm nvim-macos.tar.gz
-    mv nvim-macos/* "${INSTALL_DIR}"
-  elif [[ "$(uname)" == "Linux" ]]; then
-    # Ubuntu
-    curl -LO "https://github.com/neovim/neovim/releases/download/v${NVIM_VERSION}/nvim-linux64.tar.gz"
-    tar -xzf nvim-linux64.tar.gz
-    rm nvim-linux64.tar.gz
-    mv nvim-linux64/* "${INSTALL_DIR}"
-  fi
+if [ -x "${INSTALL_DIR}/nvim" ]; then
+    echo "nvim already installed"
+    exit 0
 fi
 
+cd /tmp
+
+if [[ "$(uname)" == "Darwin" ]]; then
+    # MacOS
+    echo "installing nvim for MacOS"
+    curl -LO "https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/nvim-macos.tar.gz"
+    tar -xzf nvim-macos.tar.gz
+    rm nvim-macos.tar.gz
+    mv nvim-macos/ "${INSTALL_DIR}/.nvim"
+    ln -s /Users/jsutterfield/bin/.nvim/bin/nvim /Users/jsutterfield/bin/nvim
+elif [[ "$(uname)" == "Linux" ]]; then
+    # Ubuntu
+    echo "installing nvim for Ubuntu"
+    curl -LO "https://github.com/neovim/neovim/releases/download/${NVIM_VERSION}/nvim.appimage"
+    chmod +x nvim.appimage
+    mv nvim.appimage "${INSTALL_DIR}/nvim"
+fi
