@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euxo pipefail
 
 # Check the current OS
 os=$(uname)

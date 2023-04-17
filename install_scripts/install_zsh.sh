@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euxo pipefail
 
 if command -v zsh >/dev/null 2>&1; then
   echo "Zsh is already installed."

@@ -1,5 +1,5 @@
 * Install oh-my-zsh
 * Install pure
-* Update how neovim is install
+* Add readme
 * update path to loolk for neovim in ~/bin
 * Update zshrc to use $HOME instead of hard-coded abosluate directories
