@@ -14,7 +14,6 @@ fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
 prompt pure
 
-
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
@@ -147,9 +146,6 @@ FZF_DEFAULT_COMMAND=fd
 
 # find all files containing the word "interface" and sort the results by modification time
 # rg -l interface | xargs ls -lt
-
-# Do this homie
-# https://www.atlassian.com/git/tutorials/dotfiles
 
 source $HOME/.config/broot/launcher/bash/br
 
