@@ -1,7 +1,7 @@
 export PATH="$HOME/bin/:$PATH"
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="/Users/jsutterfield/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -119,10 +119,10 @@ alias bb="bazel build ..."
 alias gz="gazelle"
 
 # uber dir aliases
-alias wp="cd $HOME/Uber/go-code/src/code.uber.internal/money/wallet-presentation"
-alias wo="cd $HOME/Uber/go-code/src/code.uber.internal/money/wallet-onboarding"
-alias mo="cd $HOME/Uber/go-code/src/code.uber.internal/money"
-alias pop="cd $HOME/Uber/go-code/src/code.uber.internal/money/payments-onboarding-presentation"
+alias wp="cd /Users/jsutterfield/Uber/go-code/src/code.uber.internal/money/wallet-presentation"
+alias wo="cd /Users/jsutterfield/Uber/go-code/src/code.uber.internal/money/wallet-onboarding"
+alias mo="cd /Users/jsutterfield/Uber/go-code/src/code.uber.internal/money"
+alias pop="cd /Users/jsutterfield/Uber/go-code/src/code.uber.internal/money/payments-onboarding-presentation"
 
 # uber command aliases
 alias c="cerberus"
@@ -151,7 +151,10 @@ FZF_DEFAULT_COMMAND=fd
 # Do this homie
 # https://www.atlassian.com/git/tutorials/dotfiles
 
-source $HOME/.config/broot/launcher/bash/br
+source /Users/jsutterfield/.config/broot/launcher/bash/br
+
+# alias to manage dotfiles
+alias config='/usr/bin/git --git-dir=/Users/jsutterfield/.cfg/ --work-tree=/Users/jsutterfield'
 
 # connect to go devpod
 alias dev="ssh jsutterfield.devpod-nld"
