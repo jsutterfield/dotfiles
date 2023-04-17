@@ -108,9 +108,8 @@ alias c="cerberus"
 
 # other aliases
 alias ff="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
-alias fixit='paste -s -d " " <(pbpaste) | pbcopy'
 alias vim="nvim"
-alias nv="nvim"
+alias v="nvim"
 
 # fixes for Uber environment
 export PATH=/usr/bin:"$PATH"
