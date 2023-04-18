@@ -50,7 +50,6 @@ return require('packer').startup(function(use)
   -- themes
   use 'lunarvim/colorschemes'
   use 'doums/darcula'
-  use 'folke/tokyonight.nvim'
 
   use 'tpope/vim-surround'
 
@@ -79,8 +78,8 @@ return require('packer').startup(function(use)
   -- use 'justinmk/vim-dirvish'
 
   use {
-	'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	requires = { {'nvim-lua/plenary.nvim'} }
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
   -- Has telescope use local fzf. Supposed to be faster than plain telescope
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}

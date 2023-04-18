@@ -59,7 +59,9 @@ local function vsplit_preview()
 end
 
 local config = {
+  sort_by = "case_sensitive",
   view = {
+    width = 40,
     mappings = {
       custom_only = false,
       list = {
@@ -81,6 +83,7 @@ local config = {
 }
 
 vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<cr>" ,{silent = true, noremap = true})
+vim.api.nvim_set_keymap("n", "1", ":NvimTreeFocus<cr>" ,{silent = true, noremap = true})
 nvim_tree.setup(config)
 
 
@@ -88,12 +91,3 @@ nvim_tree.setup(config)
 vim.api.nvim_create_autocmd({"QuitPre"}, {
     callback = function() vim.cmd("NvimTreeClose") end,
 })
-
--- -- vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeFocus<cr>" ,{silent = true, noremap = true})
--- require('nvim-tree').setup({
---   update_focused_file = {
---  enable = true,
---   }
--- })
---
--- vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<cr>" ,{silent = true, noremap = true})

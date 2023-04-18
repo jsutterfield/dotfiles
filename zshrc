@@ -120,4 +120,4 @@ FZF_DEFAULT_COMMAND=fd
 # connect to go devpod
 alias dev="ssh jsutterfield.devpod-nld"
 
-source $HOME/.config/broot/launcher/bash/br
+source /Users/jsutterfield/Library/Application\ Support/org.dystroy.broot/launcher/bash/br

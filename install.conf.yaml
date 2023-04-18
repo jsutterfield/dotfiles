@@ -18,6 +18,7 @@
 - link:
     ~/.zshrc: zshrc
     ~/.config/nvim: nvim
+    ~/.tmux.conf: tmux.conf
     ~/.config/bat/config: bat_config
 
 - shell:
@@ -28,4 +29,5 @@
   - [./install_scripts/install_custom_zsh_plugins.sh, 'Installing custom zsh plugins']
   - [./install_scripts/install_oh_my_zsh.sh, 'Installing oh-my-zsh']
   - [./install_scripts/install_neovim.sh, 'Installing neovim']
+  - [./install_scripts/install_tmux.sh, 'Installing tmux']
   - 'echo "Make sure to install the following programs: fzf ripgrep fd broot tldr bat autojump"'
