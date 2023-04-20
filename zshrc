@@ -1,4 +1,4 @@
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$GOPATH/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -121,3 +121,7 @@ FZF_DEFAULT_COMMAND=fd
 alias dev="ssh jsutterfield.devpod-nld"
 
 source /Users/jsutterfield/Library/Application\ Support/org.dystroy.broot/launcher/bash/br
+
+export USE_SYSTEM_GO=1
+# export GO111MODULE="auto"
+export GOPACKAGESDRIVER="/Users/jsutterfield/Uber/go-code-sparse/tools/ide/managed_gopadrv.sh"

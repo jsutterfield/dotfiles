@@ -85,9 +85,3 @@ local config = {
 vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<cr>" ,{silent = true, noremap = true})
 vim.api.nvim_set_keymap("n", "1", ":NvimTreeFocus<cr>" ,{silent = true, noremap = true})
 nvim_tree.setup(config)
-
-
--- autoclose if nvim-tree is the last buffer
-vim.api.nvim_create_autocmd({"QuitPre"}, {
-    callback = function() vim.cmd("NvimTreeClose") end,
-})
