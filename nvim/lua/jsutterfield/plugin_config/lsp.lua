@@ -90,28 +90,6 @@ local on_attach = function(_, bufnr)
   end, { desc = 'Format current buffer with LSP' })
 end
 
-local servers = {
-  clangd = {},
-  lua_ls = {
-	Lua = {
-	  runtime = {
-		-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-		version = 'LuaJIT',
-	  },
-	  diagnostics = {
-		-- Get the language server to recognize the `vim` global
-		globals = {'vim'},
-
-	  },
-	  workspace = {
-		-- Make the server aware of Neovim runtime files
-		library = vim.api.nvim_get_runtime_file("", true),
-		checkThirdParty = false,
-	  },
-	},
-  },
-}
-
 local status_ok, cmp_nvim_lsp = pcall(require, 'cmp_nvim_lsp')
 if not status_ok then
     return
@@ -132,9 +110,9 @@ mason.setup()
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
-
 lspconfig.gopls.setup {
-	cmd = {'gopls', '-remote=auto'},
+	cmd = {'gopls', '-remote=auto', '-remote.listen.timeout=0', '-debug=:0', '-remote.logfile=auto', '-logfile=auto'},
+	cmd = {'gopls', '-remote=:37374', '-logfile=auto', '-debug=:0', '-rpc.trace'},
 	debounce_text_changes = 300,
 	on_attach = on_attach,
 	settings = {
@@ -149,6 +127,7 @@ lspconfig.gopls.setup {
 	},
 	init_options = {
 		usePlaceholders = true,
+		memoryMode = "DegradeClosed",
 	},
 	capabilities = capabilities
 }
@@ -171,5 +150,8 @@ lspconfig.lua_ls.setup {
                 checkThirdParty = false,
             },
         },
-    }
+    },
+	capabilities = capabilities
 }
+
+lspconfig.pyright.setup{}

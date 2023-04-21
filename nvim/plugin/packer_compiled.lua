@@ -109,16 +109,6 @@ _G.packer_plugins = {
     path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  colorschemes = {
-    loaded = true,
-    path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/colorschemes",
-    url = "https://github.com/lunarvim/colorschemes"
-  },
-  darcula = {
-    loaded = true,
-    path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/darcula",
-    url = "https://github.com/doums/darcula"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -164,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -193,6 +188,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/vim-easymotion",
     url = "https://github.com/easymotion/vim-easymotion"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-surround"] = {
     loaded = true,

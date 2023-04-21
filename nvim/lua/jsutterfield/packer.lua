@@ -48,8 +48,7 @@ return require('packer').startup(function(use)
   use 'easymotion/vim-easymotion'
 
   -- themes
-  use 'lunarvim/colorschemes'
-  use 'doums/darcula'
+  use 'navarasu/onedark.nvim'
 
   use 'tpope/vim-surround'
 
@@ -99,6 +98,7 @@ return require('packer').startup(function(use)
 
   -- git integration
   use 'lewis6991/gitsigns.nvim'
+  use 'tpope/vim-fugitive'
 
   -- comment out code
   use 'numToStr/Comment.nvim'
