@@ -155,3 +155,4 @@ lspconfig.lua_ls.setup {
 }
 
 lspconfig.pyright.setup{}
+lspconfig.clangd.setup{}
