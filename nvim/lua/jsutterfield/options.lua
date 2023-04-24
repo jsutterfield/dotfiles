@@ -17,8 +17,8 @@ local options = {
     numberwidth = 4,                         -- set number column width to 2 {default 4}
     signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
     list = true,                             -- show tabs
-    shiftwidth = 2,                          -- the number of spaces inserted for each indentation
-    tabstop = 2,                             -- insert 4 spaces for a tab
+    shiftwidth = 4,                          -- the number of spaces inserted for each indentation
+    tabstop = 4,                             -- insert 4 spaces for a tab
     expandtab = true,                        -- convert tabs to spaces
 }
 

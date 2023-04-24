@@ -63,3 +63,7 @@ keymap("n", "<leader>z", ":Gitsigns reset_hunk<CR>", opts)
 keymap("n", "<leader>d", ":Gitsigns preview_hunk<CR>", opts)
 keymap("n", "<leader>gp", ":Gitsigns prev_hunk<CR>", opts)
 keymap("n", "<leader>gn", ":Gitsigns next_hunk<CR>", opts)
+
+-- Make it easier to clear highlights
+keymap('n', '<esc>', '<esc>:nohlsearch<CR>', opts)
+
