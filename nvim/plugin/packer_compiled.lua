@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["thrift.vim"] = {
+    loaded = true,
+    path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/thrift.vim",
+    url = "https://github.com/solarnz/thrift.vim"
+  },
   ["vim-easymotion"] = {
     loaded = true,
     path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/vim-easymotion",

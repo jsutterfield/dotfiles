@@ -83,5 +83,4 @@ local config = {
 }
 
 vim.api.nvim_set_keymap("n", "<leader>t", ":NvimTreeToggle<cr>" ,{silent = true, noremap = true})
-vim.api.nvim_set_keymap("n", "1", ":NvimTreeFocus<cr>" ,{silent = true, noremap = true})
 nvim_tree.setup(config)

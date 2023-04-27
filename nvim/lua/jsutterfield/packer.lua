@@ -94,4 +94,7 @@ return require('packer').startup(function(use)
   -- comment out code
   use 'numToStr/Comment.nvim'
 
+  -- thfift syntax highlighting
+  use 'solarnz/thrift.vim'
+
 end)
