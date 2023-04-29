@@ -104,12 +104,13 @@ alias mo="cd $HOME/Uber/go-code/src/code.uber.internal/money"
 alias pop="cd $HOME/Uber/go-code/src/code.uber.internal/money/payments-onboarding-presentation"
 
 # uber command aliases
-alias c="cerberus"
+alias cer="cerberus"
 
 # other aliases
 alias ff="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias vim="nvim"
 alias v="nvim"
+alias c="clear"
 
 # fixes for Uber environment
 export PATH=/usr/bin:"$PATH"
@@ -123,5 +124,3 @@ alias dev="ssh jsutterfield.devpod-nld"
 source /Users/jsutterfield/Library/Application\ Support/org.dystroy.broot/launcher/bash/br
 
 export USE_SYSTEM_GO=1
-# export GO111MODULE="auto"
-export GOPACKAGESDRIVER="/Users/jsutterfield/Uber/go-code-sparse/tools/ide/managed_gopadrv.sh"

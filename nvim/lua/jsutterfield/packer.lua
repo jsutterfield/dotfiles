@@ -97,4 +97,6 @@ return require('packer').startup(function(use)
   -- thfift syntax highlighting
   use 'solarnz/thrift.vim'
 
+  -- tmux integration
+  use 'christoomey/vim-tmux-navigator'
 end)
