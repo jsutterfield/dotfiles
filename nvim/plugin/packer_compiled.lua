@@ -109,6 +109,16 @@ _G.packer_plugins = {
     path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -198,6 +208,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-gofmt"] = {
+    loaded = true,
+    path = "/Users/jsutterfield/.local/share/nvim/site/pack/packer/start/vim-gofmt",
+    url = "https://github.com/darrikonn/vim-gofmt"
   },
   ["vim-surround"] = {
     loaded = true,

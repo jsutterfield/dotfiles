@@ -124,3 +124,4 @@ alias dev="ssh jsutterfield.devpod-nld"
 source /Users/jsutterfield/Library/Application\ Support/org.dystroy.broot/launcher/bash/br
 
 export USE_SYSTEM_GO=1
+export TERM="xterm-256color"

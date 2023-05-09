@@ -8,10 +8,7 @@ if not snip_status_ok then
     return
 end
 
-local check_backspace = function()
-    local col = vim.fn.col "." - 1
-    return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
-end
+require("luasnip.loaders.from_vscode").lazy_load()
 
 --   פּ ﯟ   some other good icons
 local kind_icons = {
@@ -44,6 +41,13 @@ local kind_icons = {
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
 cmp.setup {
+	enabled = function()
+		if require"cmp.config.context".in_treesitter_capture("comment")==true or require"cmp.config.context".in_syntax_group("Comment") then
+			return false
+		else
+			return true
+		end
+	end,
     snippet = {
         expand = function(args)
             luasnip.lsp_expand(args.body) -- For `luasnip` users.
@@ -85,7 +89,6 @@ cmp.setup {
         format = function(entry, vim_item)
             -- Kind icons
             vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-            -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
             vim_item.menu = ({
                 nvim_lsp = "[LSP]",
                 luasnip = "[Snippet]",

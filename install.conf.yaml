@@ -19,6 +19,7 @@
     ~/.zshrc: zshrc
     ~/.ideavimrc: ideavimrc
     ~/.config/nvim: nvim
+    ~/.config/alacritty/alacritty.yml: alacritty.yaml
     ~/.tmux.conf: tmux.conf
     ~/.config/bat/config: bat_config
 

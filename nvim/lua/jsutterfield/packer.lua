@@ -53,10 +53,14 @@ return require('packer').startup(function(use)
   -- -- snippet completion
   use 'L3MON4D3/LuaSnip' -- snippet engine
   use 'saadparwaiz1/cmp_luasnip'
+  use "rafamadriz/friendly-snippets"
 
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'williamboman/mason.nvim'
+
+  -- Go helper commands
+  use 'darrikonn/vim-gofmt'
 
   -- auto paranthesis closing
   use 'windwp/nvim-autopairs'
@@ -70,7 +74,8 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  -- Has telescope use local fzf. Supposed to be faster than plain telescope
+
+  -- use a special c port of fzf which runs faster
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
 
   use {
@@ -99,4 +104,7 @@ return require('packer').startup(function(use)
 
   -- tmux integration
   use 'christoomey/vim-tmux-navigator'
+
+  -- loading bar for lsp
+  use 'j-hui/fidget.nvim'
 end)

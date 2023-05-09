@@ -29,7 +29,7 @@ keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
-keymap("n", "<C-Enter>", "<C-w>=", opts)
+keymap("n", "<C-Enter>", "<C-w>=<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -67,3 +67,5 @@ keymap("n", "<leader>gn", ":Gitsigns next_hunk<CR>", opts)
 -- Make it easier to clear highlights
 keymap('n', '<esc>', '<esc>:nohlsearch<CR>', opts)
 
+-- close the current buffer without closing the split "close buffer"
+keymap('n', '<leader>cb', ":bp|bd #<CR>", opts)

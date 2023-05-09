@@ -1,2 +1,1 @@
-* make sure snippets work
 * Figure out what's up with this error: Error executing vim.schedule lua callback: ...im/0.8.3/share/nvim/runtime/lua/vim/treesitter/query.lua:499: bad argument #1 to 'handler' (string expected, got nil)

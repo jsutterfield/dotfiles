@@ -40,6 +40,7 @@ map <Leader>I <Action>(GotoImplementation)
 map <Leader>? <Action>(QuickJavaDoc)
 map <Leader>b <Action>(ToggleLineBreakpoint)
 map <Leader>e <Action>(GotoNextError)
+map <Leader>sg <Action>(sourcegraph.copy)
 
 " easy motion mappings
 map <Leader>g <Plug>(easymotion-bd-jk)
